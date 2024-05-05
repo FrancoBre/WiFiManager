@@ -1,9 +1,83 @@
 <!-- HTTP_HEAD -->
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, user-scalable=no\"/>
-		<title>{v}</title>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" charset="UTF-8"/>
+    <title>Hive Guard</title>
+	<style>
+		body{
+			font-family:Arial,Helvetica,sans-serif;
+			background:#ffffe0 !important; /* Light yellow */
+			color:#333 !important;
+			padding:0 .5em;
+		}
+		.hexagon {
+			width: 30px;
+			height: 17.32px;
+			background-color: #333 !important;
+			position: relative;
+			margin: 8.66px 0;
+		}
+		.hexagon:before, .hexagon:after {
+			content: "";
+			position: absolute;
+			width: 0;
+			border-left: 15px solid transparent;
+			border-right: 15px solid transparent;
+		}
+		.hexagon:before {
+			bottom: 100%;
+			border-bottom: 8.66px solid #333;
+		}
+		.hexagon:after {
+			top: 100%;
+			width: 0;
+			border-top: 8.66px solid #333;
+		}
+		img{
+			display:block;
+			margin:0 auto;
+		}
+		.header{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.header-top{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+		}
+		.header img{
+			height: 50px;
+		}
+		.header h1{
+			margin: 0;
+			font-family: 'Courier New', Courier, monospace;
+			color: saddlebrown !important;
+			background: #ffffe0 !important; /* Light yellow */
+		}
+		.header p {
+			font-family: 'Courier New', Courier, monospace; /* Cambia 'Courier New' por la fuente que prefieras */
+			color: #333; /* Cambia '#333' por el color que prefieras */
+			font-size: 1em; /* Cambia '1em' por el tamaño de fuente que prefieras */
+			line-height: 1.5; /* Cambia '1.5' por el espacio entre líneas que prefieras */
+			margin-top: 10px; /* Cambia '10px' por el margen superior que prefieras */
+		}
+	</style>
+</head>
+<body>
+<div class="header">
+	<div class="header-top">
+		<img src="../img/bee.png" alt="Bee Icon">
+		<h1>Hive Guard</h1>
+		<img src="../img/camera.png" alt="Camera Icon">
+	</div>
+	<p>Ir a "Configure WiFi" para configurar el wifi.</p>
+	<p>Donde dice SSID pone el nombre de la red wifi donde está corriendo el servidor master de Hive Guard, y luego la contraseña.</p>
+</div>
 <!-- /HTTP_HEAD -->
 <!-- HTTP_STYLE -->
 <style>
@@ -11,7 +85,8 @@
 :root{
 	 /* CSS VARIABLE THEME COLOR */
 	/*--primarycolor:#9933CC;*/
-	--primarycolor:#1fa3ec;
+	/*--primarycolor:#1fa3ec;*/
+	--primarycolor:green;
 }
 
 body.invert,
@@ -207,7 +282,7 @@ button:hover{
 		</script>
 <!-- /HTTP_SCRIPT -->
 <!-- HTTP_HEAD_END -->
-	</head>
+	</body>
 	<body class="invert">
 		<div class='wrap'>
 		<!-- <div class='wrap ql qinv'> -->
